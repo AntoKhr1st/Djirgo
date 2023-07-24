@@ -74,8 +74,8 @@ DATABASES = {
         'NAME': os.environ.get('POSTGRES_DB', 'testdb'),
         'USER': os.environ.get('POSTGRES_USER', 'antokhrist'),
         'PASSWORD': os.environ.get('POSTGRES_PASSWORD', 'test'),
-        'HOST': os.environ.get('POSTGRES_HOST', 'localhost'),
-        # 'HOST': 'db',
+        # 'HOST': os.environ.get('POSTGRES_HOST', 'localhost'),
+        'HOST': 'db',
         'PORT': os.environ.get('POSTGRES_PORT', '5432'),
     }
 }
@@ -141,3 +141,12 @@ SIMPLE_JWT = {
    'ACCESS_TOKEN_LIFETIME': timedelta(days=30),
    'AUTH_HEADER_TYPES': ('Bearer',),
 } 
+
+
+RABBITMQ_SETTINGS = {
+    'HOST': 'localhost',
+    'PORT': 5672,
+    'USERNAME': 'guest',
+    'PASSWORD': 'guest',
+}
+
