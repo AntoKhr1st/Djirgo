@@ -144,9 +144,11 @@ SIMPLE_JWT = {
 
 
 RABBITMQ_SETTINGS = {
-    'HOST': 'localhost',
+    'HOST': 'rabbit',
     'PORT': 5672,
     'USERNAME': 'guest',
     'PASSWORD': 'guest',
 }
+
+BROKER_URL = f'amqp://{os.environ["RABBITMQ_USERNAME"]}:{os.environ["RABBITMQ_PASSWORD"]}@{os.environ["RABBITMQ_HOST"]}:{os.environ["RABBITMQ_PORT"]}/'
 
